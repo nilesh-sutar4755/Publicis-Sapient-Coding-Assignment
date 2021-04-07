@@ -29,3 +29,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Installed Packages
 2. npm i ngx-ui-loader
 1. npm i angular-cli-ghpages --save --dev
+
+## Steps to make build and deploy app to gh-pages
+1. ng build --prod --base-href "https://nilesh-sutar4755.github.io/Publicis-Sapient-Coding-Assignment/"
+
+2. npx angular-cli-ghpages --dir .\dist\
+
+
