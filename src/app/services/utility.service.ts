@@ -15,8 +15,8 @@ export class UtilityService {
     return ([...Array(end + 1).keys()].filter(value => end >= value && start <= value));
   }
 
-  getAPICall(url): Observable<any> {
-    return this.httpClient.get(url)
+  getAPICall(serviceEndpoint,url): Observable<any> {
+    return this.httpClient.get(serviceEndpoint + url)
   }
 
 }

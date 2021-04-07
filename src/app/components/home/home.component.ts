@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UtilityService } from 'src/app/services/utility.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -69,7 +70,7 @@ export class HomeComponent implements OnInit {
     }
     sessionStorage.setItem('selectedFilters', JSON.stringify(selectedFilters))
     this.isDataLoaded = false;
-    this.utilityService.getAPICall('https://api.spacexdata.com/v3/launches?limit=100' + url)
+    this.utilityService.getAPICall(environment.apiUrl,'?limit=100' + url)
       .subscribe(result => {
         this.spaceXdata = [];
         this.spaceXdata = result;
